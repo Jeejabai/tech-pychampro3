@@ -1,0 +1,52 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+     <link rel="stylesheet" href="{% static 'nav.css' %}">
+    <link rel="stylesheet" href="{% static 'project.css' %}">
+</head>
+<body>
+<section>
+    <nav>
+        <div class="logo">
+            <img src="{% static 'logo.jpg' %}" alt="">
+        </div>
+        <ul>
+            <li><a href="home1">HOME</a> </li>
+            <li><a href="newabt">ABOUT</a> </li>
+            <li><a href="service">SERVICE</a> </li>
+            <li><a href="project">PROJECTS</a> </li>
+            <li><a href="contact">CONTACT</a> </li>
+            <li><a href="log">SIGN IN</a> </li>
+        </ul>
+
+    </nav>
+</section>
+<div class="add">
+    <div class="top">
+          <h1 >PROJECTS</h1>
+    </div>
+</div>
+<div class="sec">
+    <div class="title">
+        <h3>OUR PROJECTS</h3>
+        <h1> See What We Have Completed Recently</h1>
+    </div>
+    {% for i in project %}
+    <div class="services">
+        <div class="card">
+            <div class="icon">
+                <img src="{{i.img.url}}">
+            </div>
+            <h2>{{i.head}}</h2>
+            <p>{{i.data}}</p>
+            <a href="#" class="button">Read More</a>
+        </div>
+    </div>
+    {% endfor%}
+</div>
+
+</body>
+</html>

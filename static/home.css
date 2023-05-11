@@ -1,0 +1,22 @@
+.carousel-item img{
+     object-fit:cover;
+     height:100vh;
+     overflow:hidden;
+}
+
+.carousel-caption {
+     position:relative;
+}
+.text-block{
+
+   bottom:10px;
+   left:20px;
+   background-color:linear-gradient(to right, rgba(2,36,91,1)0%, rgba(2,36,91,0)100%);
+   color:white;
+   padding-left:20px;
+   padding-right:20px;
+}
+.text-block h{
+  font-size:100px;
+}
+

@@ -1,0 +1,47 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+     <link rel="stylesheet" href="{% static 'nav.css' %}">
+</head>
+<body>
+<section>
+    <nav>
+        <div class="logo">
+            <img src="{% static 'logo.jpg' %}" alt="logo">
+        </div>
+        <ul>
+            <li><a href="home1">HOME</a> </li>
+            <li><a href="newabt">ABOUT</a> </li>
+            <li><a href="service">SERVICE</a> </li>
+            <li><a href="project">PROJECTS</a> </li>
+            <li><a href="contact">CONTACT</a> </li>
+            <li><a href="log">SIGN IN</a> </li>
+        </ul>
+
+    </nav>
+</section>
+<div class="outerbox">
+    <div class="innerbox">
+           <div class="login-text">
+               <h1>PROJECT FORM</h1>
+           </div>
+           <div class="log-form">
+               <form method="POST" action="">
+                   <label>Image</label>
+                   <input type="file" name="img"><br>
+                   <label>Heading</label>
+                   <input type="text" name="head"><br>
+                    <label>Description</label>
+                   <input type="text" name="data"><br>
+
+                   <div class="btn">
+                       <input type="submit" value="Add">
+
+                   </div>
+                   {%csrf_token%}
+               </form>
+</body>
+</html>

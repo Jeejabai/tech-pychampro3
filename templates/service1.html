@@ -1,0 +1,59 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+     <link rel="stylesheet" href="{% static 'nav.css' %}">
+    <link rel="stylesheet" href="{% static 'service.css' %}">
+</head>
+<body>
+<section>
+    <nav>
+        <div class="logo">
+            <img src="{% static 'logo.jpg' %}" alt="">
+        </div>
+        <ul>
+            <li><a href="home1">HOME</a> </li>
+            <li><a href="newabt">ABOUT</a> </li>
+            <li><a href="service">SERVICE</a> </li>
+            <li><a href="project">PROJECTS</a> </li>
+            <li><a href="contact">CONTACT</a> </li>
+            <li><a href="home1">LOGOUT</a> </li>
+        </ul>
+
+    </nav>
+</section>
+<div class="add">
+    <div class="top">
+          <h1 >SERVICES</h1>
+    </div>
+</div>
+<div class="sec">
+    <div class="title">
+        <h3>OUR SERVICES</h3>
+        <h1>We Provide Best Industrial Services </h1>
+    </div>
+    {% for i in service %}
+    <div class="services">
+        <div class="card">
+            <div class="icon">
+                <img src="{{i.img.url}}">
+            </div>
+            <h2>{{i.head}}</h2>
+            <p>{{i.data}}</p>
+            <a href="#" class="button">Read More</a>
+            <div class="btn">
+                <a class="first" href="{% url 'supdate' i.id %}" >Edit</a>
+                <a  class="third" href="{% url 'sde' i.id %}" >Delete</a>
+            </div>
+        </div>
+    </div>
+    {% endfor%}
+
+
+
+</div>
+
+</body>
+</html>

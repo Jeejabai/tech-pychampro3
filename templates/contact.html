@@ -1,0 +1,75 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+     <link rel="stylesheet" href="{% static 'nav.css' %}">
+    <link rel="stylesheet" href="{% static 'service.css' %}">
+</head>
+<body>
+<section>
+    <nav>
+        <div class="logo">
+            <img src="{% static 'logo.jpg' %}" alt="">
+        </div>
+        <ul>
+            <li><a href="home1">HOME</a> </li>
+            <li><a href="newabt">ABOUT</a> </li>
+            <li><a href="service">SERVICE</a> </li>
+            <li><a href="project">PROJECTS</a> </li>
+            <li><a href="contact">CONTACT</a> </li>
+            <li><a href="log">SIGN IN</a> </li>
+        </ul>
+
+    </nav>
+</section>
+<div class="add">
+    <div class="top">
+          <h1 >CONTACT US</h1>
+    </div>
+</div>
+<div class="sec">
+    <div class="title">
+        <h3>CONTACT US</h3>
+        <h1>If You Have Any Queries, Please Feel Free To Contact Us </h1>
+    </div>
+
+    <div class="services">
+        <div class="card">
+            <div class="icon">
+                <img src="{% static 'call.jpg' %}">
+            </div>
+            <h2>Phone Number</h2>
+            <p>+91 9995851699</p>
+        </div>
+    </div>
+
+     <div class="services">
+        <div class="card">
+            <div class="icon">
+                <img src="{% static 'mail.jpg' %}">
+            </div>
+            <h2>Email Address</h2>
+            <p>info@dencoexim.in</p>
+        </div>
+    </div>
+
+     <div class="services">
+        <div class="card">
+            <div class="icon">
+                <img src="{% static 'location.jpg' %}">
+            </div>
+            <h2>Office Address</h2>
+            <p>Global Business Center</p>
+        </div>
+    </div>
+
+
+
+
+
+</div>
+
+</body>
+</html>
