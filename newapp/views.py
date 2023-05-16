@@ -24,19 +24,19 @@ def valid(request):
     c=Login.objects.get(username=username,password1=password1)
     if c.type==1:
         request.session['username']=c.username
-        return render(request,'home.html')
+        return render(request,'index.html')
     if c.type==0:
         request.session['password1']=c.password1
         return render(request,'adhome.html')
 
 def home(request):
-    return render(request, 'home.html')
+    return render(request, 'index.html')
 def adhome(request):
     return render(request, 'adhome.html')
 def about(request):
     return render(request, 'about.html')
 def home1(request):
-    return render(request, 'home.html')
+    return render(request, 'index.html')
 def serform(request):
     if request.method == "POST":
         img = request.POST['img']
